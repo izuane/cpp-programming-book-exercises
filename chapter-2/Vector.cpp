@@ -1,0 +1,29 @@
+#include "Vector.h" //get the interface
+#include <iostream>
+
+using namespace std;
+
+// Provide implementation of methods from Vector.h
+Vector::Vector(int s)
+    :elem {new double[s]}, sz{s}
+{
+
+}
+
+double& Vector::operator[](int i)
+{
+    return elem[i];
+}
+
+int Vector::size()
+{
+    return sz;
+}
+
+int main()
+{
+    Vector v(6);
+
+    cout << v.size();
+
+}
